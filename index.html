@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Formulario de registro con múltiples páginas</title>
+<link rel="stylesheet" href="estiloFormulario.css">
+</head>
+<body>
+<div class="root">
+<form action="" name="formregister"class="form-register">
+<div class="form-register__header">
+<ul class="progressbar">
+<li class="progressbar__option active">Página 1</li>
+<li class="progressbar__option">Página 2</li>
+<li class="progressbar__option">Página 3</li>
+<li class="progressbar__option">Página 4</li>
+</ul>
+<h1 class="form-register__title">Formulario de registro de varios pacientes</h1>
+</div>
+
+    <!--Pagina 1-->
+<div class="form-register__body">
+<div class="step active" id="step-1">
+<div class="step__header">
+<h2 class="step__title">Datos personales<small>(Página #1)</small></h2>
+</div>
+<div class="step__body">
+<label for="Nombres">Ingrese el nombre del paciente #1:</label>  
+<input type="text" name="nombre" placeholder="Nombre" id="nombre1" class="step__input">
+<label for="Apellidos">Ingrese  los apellidos del paciente #1 :</label>
+<input type="text" name="apellido" placeholder="Apellidos"  id="apellidos1" class="step__input">
+<label for="edad">Ingrese la edad del paciente #1:</label>
+<input type="text" name="apellido" placeholder="Edad"  id="edad1" class="step__input"><br><br>
+</div>
+
+<div class="step__body">
+<label for="Nombres">Ingrese el nombre del paciente #2:</label>  
+<input type="text" name="nombre" placeholder="Nombre" id="nombre2" class="step__input">
+<label for="Apellidos">Ingrese  los apellidos del paciente #2:</label>
+<input type="text" name="apellido" placeholder="Apellidos"  id="apellidos2" class="step__input">
+<label for="edad">Ingrese la edad del paciente #2:</label>
+<input type="text" name="apellido" placeholder="Edad"  id="edad2" class="step__input"><br><br>
+</div>
+
+<div class="step__body">
+<label for="Nombres">Ingrese el nombre del paciente #3:</label>  
+<input type="text" name="nombre" placeholder="Nombre" id="nombre3" class="step__input">
+<label for="Apellidos">Ingrese  los apellidos del paciente #3:</label>
+<input type="text" name="apellido" placeholder="Apellidos"  id="apellidos3" class="step__input">
+<label for="edad">Ingrese la edad del paciente #3:</label>
+<input type="text" name="apellido" placeholder="Edad"  id="edad3" class="step__input"><br><br>
+</div>
+
+<div class="step__footer">
+<button type="button" class="step__button step__button--next" data-to_step="2" data-step="1">Siguiente</button>
+</div>
+</div>
+
+    <!--Pagina 2-->  
+<div class="step" id="step-2">
+<div class="step__header">
+<h2 class="step__title">Familiares<small>(Página #2)</small></h2>
+</div>
+<div class="step__body">
+<label for="datofamiliar">Ingrese datos de un familiar 1:</label>    
+<input type="text" placeholder="Nombre" id="nombreFamiliar1" class="step__input">
+<input type="text" placeholder="Parentesco" id="parentesco1" class="step__input">
+<input type="text" placeholder="Edad" id="edadParentesco1" class="step__input"><br>
+</div>
+  
+<div class="step__body">
+<label for="datofamiliar">Ingrese datos de un familiar 2:</label>    
+<input type="text" placeholder="Nombre" id="nombreFamiliar2"  class="step__input">
+<input type="text" placeholder="Parentesco" id="parentesco2"  class="step__input">
+<input type="text" placeholder="Edad" id="edadParentesco2"  class="step__input"><br>
+    </div>
+    
+<div class="step__body">
+<label for="datofamiliar">Ingrese datos de un familiar 3:</label>    
+<input type="text" placeholder="Nombre"  id="nombreFamiliar3" class="step__input">
+<input type="text" placeholder="Parentesco" id="parentesco3" class="step__input">
+<input type="text" placeholder="Edad" id="edadParentesco3"  class="step__input">
+  </div>
+
+<div class="step__footer">
+<button type="button" class="step__button step__button--back" data-to_step="1" data-step="2">Regresar</button>
+<button type="button" class="step__button step__button--next" data-to_step="3" data-step="2">Siguiente</button>
+</div>
+</div>
+  
+
+    <!--Pagina 3-->  
+<div class="step" id="step-3">
+<div class="step__header">
+<h2 class="step__title">Condiciones Pre-Existentes de Salud <small>(Página #3)</small></h2>
+</div>
+
+<div class="step__body">
+<label for="check">¿Has tenido enfermedad pre Pre-Existentes de salud?</label><br>
+<input type="checkbox" name="yes">Si<br>
+<input type="checkbox" name="no">No<br><br> 
+<label for="enfermedad">¿Que enfermedad tienes? (paciente #1):</label>    
+<input type="text" placeholder="Enfermedad" id="enfermedad1" class="step__input">
+<label for="tiempoEnfer">¿Que tiempo lleva con esa enfermedad?:</label>    
+<input type="text" placeholder="Tiempo con la enfermedad" id="tiempoEnfermedad1" class="step__input">
+</div>
+
+<div class="step__body">
+<label for="check">¿Has tenido enfermedad pre Pre-Existentes de salud?</label><br>
+<input type="checkbox" name="yes">Si<br>
+<input type="checkbox" name="no">No<br><br>  
+<label for="enfermedad">¿Que enfermedad tienes? (paciente #2):</label>    
+<input type="text" placeholder="Enfermedad" id="enfermedad2" class="step__input">
+<label for="tiempoEnfer">¿Que tiempo lleva con esa enfermedad?:</label>    
+<input type="text" placeholder="Tiempo con la enfermedad" id="tiempoEnfermedad2" class="step__input">
+</div>
+
+<div class="step__body">
+<label for="check">¿Has tenido enfermedad pre Pre-Existentes de salud?</label><br>
+<input type="checkbox" name="yes">Si<br>
+<input type="checkbox" name="no">No<br><br>      
+<label for="enfermedad">¿Que enfermedad tienes? (paciente #3):</label>    
+<input type="text" placeholder="Enfermedad" id="enfermedad3" class="step__input">
+<label for="tiempoEnfer">¿Que tiempo lleva con esa enfermedad?:</label>    
+<input type="text" placeholder="Tiempo con la enfermedad" id="tiempoEnfermedad3" class="step__input">
+</div>
+
+
+<div class="step__footer">
+<button type="button" class="step__button step__button--back" data-to_step="2" data-step="3">Regresar</button>
+<button type="button" class="step__button step__button--next" data-to_step="4" data-step="3">Siguiente</button>
+</div>
+</div>
+
+
+    <!--Pagina 4-->
+<div class="step active" id="step-4">
+<div class="step__header">
+<h2 class="step__title">Internamientos Realizados<small>(Página #4)</small></h2>
+</div>
+
+<div class="step__body">
+<label for="fecha">Fecha de la cita para paciente #1:</label>    
+<input type="date" placeholder="Fecha" id="fecha1" class="step__input">
+<label for="hospital">Nombre del centro médico:</label>    
+<input type="text" placeholder="Centro médico" id="centroMedico1" class="step__input">
+<textarea rows="4" cols="80" placeholder="Diagnóstico" id="diagnostico1" class="step__input"></textarea><br>
+</div>
+
+<div class="step__body">
+<label for="fecha">Fecha de la cita para paciente #2:</label>    
+<input type="date" placeholder="Fecha" id="fecha2" class="step__input">
+<label for="hospital">Nombre del centro médico:</label>    
+<input type="text" placeholder="Centro médico" id="centroMedico2" class="step__input">
+<textarea rows="4" cols="80" placeholder="Diagnóstico" id="diagnostico2" class="step__input"></textarea><br>
+</div>
+
+<div class="step__body">
+<label for="fecha">Fecha de la cita para paciente #3:</label>    
+<input type="date" placeholder="Fecha" id="fecha3" class="step__input">
+<label for="hospital">Nombre del centro médico:</label>    
+<input type="text" placeholder="Centro médico" id="centroMedico3" class="step__input">
+<textarea rows="4" cols="80" placeholder="Diagnóstico" id="diagnostico3" class="step__input"></textarea><br>
+</div>
+    
+<div class="step__footer">
+<button type="button" class="step__button step__button--back" data-to_step="3" data-step="4">Regresar</button>
+<button type="submit" class="step__button" onClick="mostrar()">Finalizar</button>
+</div>
+</div>
+ 
+</div>
+</div>
+</div>
+</form>
+</div>
+<script src="MoverPagina.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="estiloFormulario.css">
+  <title>Formulario Registro</title>
+</head>
+
+<body>
+    
+    <div class="container">
+    <header>Formulario Registro</header>
+    <div class="form-principal">
+        <form action="#">
+
+           Pagina 1
+        <div class="pagina moverPagina"> 
+        <div class="titulo">Datos personales </div>
+        <div class="campo">
+            <div class="label">Nombres: </div>
+            <input type="text" id="nombre" placeholder="Nombres">
+        </div>
+          
+        <div class="campo">
+            <div class="label">Apellidos: </div>
+            <input type="text" id="apellido" placeholder="Apellidos">
+        </div>
+        
+        <div class="campo">
+            <button class="adelantar">Siguiente </button>
+        </div>
+    </div>
+
+
+       Pagina 2
+       <div class="pagina"> 
+        <div class="titulo">Familiares </div>
+        <div class="campo">
+            <div class="label">Nombres: </div>
+            <input type="text" id="nombre" placeholder="Nombres">
+            <div class="label">Parentesco: </div>
+            <input type="text" id="parentesco" placeholder="Parentesco">
+            <div class="label">Edad: </div>
+            <input type="number" id="Edad" placeholder="Edad">
+        </div>
+          
+        <div class="campo">
+            <div class="label">Nombres: </div>
+            <input type="text" id="name" placeholder="Nombres">
+            <div class="label">Parentesco: </div>
+            <input type="text" id="parentesco" placeholder="Parentesco">
+            <div class="label">Edad: </div>
+            <input type="number" id="Edad" placeholder="Edad"><br>
+        </div>
+        
+        <div class="campo">
+            <div class="label">Nombres: </div>
+            <input type="text" id="name" placeholder="Nombres">
+            <div class="label">Parentesco: </div>
+            <input type="text" id="parentesco" placeholder="Parentesco">
+            <div class="label">Edad: </div>
+            <input type="number" id="Edad" placeholder="Edad"><br>
+        </div>
+
+        <div class="campo botones">
+            <button class="volver">Atras </button>
+            <button class="adelantar">Siguiente </button>
+        </div>
+    </div>
+
+
+         Pagina 3
+         <div class="pagina"> 
+            <div class="titulo">Condiciones Pre-Existentes de Salud </div>
+            <div class="campo">
+                <div class="label">Enfermedad: </div>
+                <input type="text" id="name" placeholder="Enfermedad">
+            </div>
+              
+            <div class="campo">
+                <div class="label">Tiempo con la enfermedad: </div>
+                <input type="text" id="tiempoEnf" placeholder="tiempo">
+            </div>
+            
+            <div class="campo">
+                <button class="volver" >Atras </button>
+                <button class="adelantar">Siguiente </button>
+            </div>
+        </div>
+
+       
+        Pagina 4
+        <div class="pagina"> 
+            <div class="titulo">Internamientos Realizados </div>
+            <div class="campo">
+                <div class="label">Fecha: </div>
+                <input type="date" id="fecha" placeholder="Fecha">
+            </div>
+              
+            <div class="campo">
+                <div class="label"> Centro Médico: </div>
+                <input type="text" id="centromedico" placeholder="Centro Médico">
+            </div>
+
+            <div class="campo">
+                <div class="label">Diagnóstico: </div>
+                <input type="text" id="Diagnóstico" placeholder="Diagnóstico">
+            </div>
+            
+            <div class="campo">
+                <button class="volver" >Atras </button>
+                <button class="fin">Finalizar </button>
+            </div>
+        </div>
+
+        </form>
+    </div>
+</div>
+  <script src="MoverPagina.js"></script>
+  </body>
+  </html> -->
+
